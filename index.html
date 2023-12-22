@@ -55,7 +55,7 @@ for Your Business" />
     <!-- main -->
     <main>
       <!-- hero page -->
-      <section class="hero-section">
+      <section class="hero-section section">
         <div class="container hero-container">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
           <button class="hero-button" type="button">Order Service</button>
@@ -426,40 +426,124 @@ for Your Business" />
           </p>
         </div>
         <div class="footer-right-side"> 
+          <div> 
           <p class="media-text">Social media</p>
-          <ul class="icons-list footer-icons-list"> 
-            <li class="footer-icons-item"> 
-              <a class="icons-link footer-icons-link" href="https://instagram.com">
-                <svg class="footer-social" width="24" height="24">
-                  <use href="./images/icons.svg#icon-instagram-icon1"></use>
+            <ul class="icons-list footer-icons-list"> 
+              <li class="footer-icons-item"> 
+                <a class="icons-link footer-icons-link" href="https://instagram.com">
+                  <svg class="footer-social" width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram-icon1"></use>
+                  </svg>
+                </a>
+              </li>  
+              <li class="footer-icons-item">
+                <a class="icons-link footer-icons-link" href="https://twitter.com">
+                  <svg class="footer-social" width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter-icon1"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-icons-item">
+                <a class="icons-link footer-icons-link" href="https://facebook.com">
+                  <svg class="footer-social" width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook-item"></use>
+                  </svg>
+                </a>
+              </li>  
+              <li class="footer-icons-item">
+                <a class="icons-link footer-icons-link" href="https://linkedin.com">
+                  <svg class="footer-social" width="24" height="24">
+                    <use href="./images/icons.svg#icon-linkedin-item"></use>
+                  </svg>
+                </a>
+              </li>   
+            </ul>
+        </div>
+        <!-- Footer subscribe form -->
+          <div class="footer-wrapper">
+            <p class="wrapper-caption">Subscribe</p>
+            <form class="subscribe-form" name="subscribe">
+              <label class="subscribe-form-field">
+                <input
+                  class="subscribe-form-input"
+                  type="email"
+                  placeholder="E-mail" />
+              </label>
+              <button class="subscribe-form-btn" type="submit">
+                Subscribe
+                <svg class="subscribe-form-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-send"></use>
                 </svg>
-              </a>
-            </li>  
-            <li class="footer-icons-item">
-              <a class="icons-link footer-icons-link" href="https://twitter.com">
-                <svg class="footer-social" width="24" height="24">
-                  <use href="./images/icons.svg#icon-twitter-icon1"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-icons-item">
-              <a class="icons-link footer-icons-link" href="https://facebook.com">
-                <svg class="footer-social" width="24" height="24">
-                  <use href="./images/icons.svg#icon-facebook-item"></use>
-                </svg>
-              </a>
-            </li>  
-            <li class="footer-icons-item">
-              <a class="icons-link footer-icons-link" href="https://linkedin.com">
-                <svg class="footer-social" width="24" height="24">
-                  <use href="./images/icons.svg#icon-linkedin-item"></use>
-                </svg>
-              </a>
-            </li>   
-          </ul>
+              </button>
+            </form>
+          </div>
           
         </div>
       </div>
     </footer>
+
+    <!-- Modal window -->
+    <div class="backdrop is-hidden" is-open>
+      <div class="modal">   
+        <form class="modal-form form" name="modal" autocomplete="off"></form>
+          <button class="close-button" type="button" aria-label="modal close button">
+            <svg class="close-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-x-close"></use>
+            </svg>
+          </button>
+       
+          <p class="form-title">Leave your contacts and we will call you back</p>
+        
+          <label class="form-label" for="user_name">
+            Name
+          </label>  
+          <div class="user-div"> 
+            <input class="form-input" type="text" id="user_name" name="Name" required/>
+            <svg class="icon-name icon-input" width="24" height="24">
+              <use href="./images/icons.svg#person-icon"></use>
+            </svg>
+          </div>
+      
+          <label class="form-label" for="phone">
+            Phone 
+          </label>  
+          <div class="user-div"> 
+            <input class="form-input" id="phone" type="tel" name="phone" required/>
+            <svg class="icon-phone icon-input" width="24" height="24">
+              <use href="./images/icons.svg#phone-icon"></use>
+            </svg>
+          </div>
+        
+        
+          <label class="form-label">
+            Email
+          </label>  
+          <div class="user-div"> 
+            <input class="form-input" type="email" name="email" required/>
+            <svg class="icon-mail icon-input" width="24" height="24">
+              <use href="./images/icons.svg#email-icon"></use>
+            </svg>
+          </div> 
+        
+      
+          <label class="form-label" for="comment">
+            Comment 
+          </label>  
+          <textarea class="text-area"  id="comment" name="Comment" rows="5" placeholder="Text input..."></textarea>
+        
+
+          <div class="checkbox-div"> 
+            <label for=""> 
+              <input class="checkbox" type="checkbox" name="" value="" />
+              <p class="chackbox-text"> 
+                I accept the terms and conditions of the<span class="accent"> Privacy Policy</span>
+              </p> 
+            </label>   
+          </div>
+          <button class="form-button" type="submit">Send</button>
+
+        </form>
+      </div>
+    </div>
   </body>
 </html>

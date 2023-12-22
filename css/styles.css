@@ -682,22 +682,7 @@ img {
     background: var(--DAIRY, #FCFCFC);
   }
 
-/* .modal-btn {
-  position: absolute;
-  top: 24px;
-  right: 24px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  min-width: 28px;
-  height: 28px;
-
-  color: #111111;
-}
-.modal-btn-icon {
-  stroke: currentColor;*/
 
   .close-button {
     position: absolute;
@@ -715,6 +700,7 @@ img {
     
     stroke-width: 1px;
     stroke: rgba(0, 0, 0, 0.10);
+    
   }
 
   .close-icon {
@@ -737,11 +723,12 @@ img {
     display: flex;
     flex-wrap: wrap;
     width: 360px;
+    height: 24px;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: -0.02em;
-  
+    color: #2E2F42;
     margin-top: 24px;
     margin-bottom: 16px;
   }
@@ -768,10 +755,9 @@ img {
     align-items: flex-start;
   }
   
-  .form-input:hover,
   .form-input:focus {
     border-radius: 13px;
-    border: 1.5px solid var(--orange, #FD9222);
+    border: 1.5px solid var(--orange, #4D5AE5);
     box-shadow: 0px 5.445px 5.445px 0px rgba(0, 0, 0, 0.03);
   }
 
@@ -782,11 +768,19 @@ img {
   
   .icon-input {
     position: absolute;
-  
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+
+    fill: #2E2F42;
+    stroke: #2E2F42;
+
+    transition: fill 300ms ease-in;
   }
   
+  .form-input:focus + .icon-input {
+    fill: #4D5AE5;
+  }
   
   .text-area {
     color: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
@@ -808,22 +802,34 @@ img {
 
 
   .checkbox-div {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    gap: 8px;
-    align-items: center;
     
+    display: flex;
     margin-top: 16px;
+    margin-bottom: 24px;
   }
   
-  .checkbox {
-    
+  .input-checkbox {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    position: relative;
+   
+  }
+
+  .checkbox { 
+   
     width: 16px;
     height: 16px;
     border-radius: 6px;
     border: 1px solid rgba(17, 17, 17, 0.14);
-   
+  }
+  
+  .checkbox-icon {
+    position: absolute;
+    stroke: #F4F4FD;
+    fill: #404BBF;
+    stroke-width: 1px;
+    border-color: transparent;
   }
   
   .checkbox-text {
@@ -850,8 +856,7 @@ img {
 
     border-radius: 4px;
     background: var(--IRIS, #4D5AE5);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-
+    
     color: var(--WHITE, #FFF);
     text-align: center;
     margin: 24px auto 0 auto;
@@ -860,9 +865,15 @@ img {
     font-weight: 500;
     line-height: 1.5; 
     letter-spacing: 0.04em;
-    
+    transform: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
-
+  .form-button:hover,
+  .form-button:focus {
+    color: #FFF;
+    background-color: #404BBF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    
+  } 
   
   

@@ -671,30 +671,33 @@ img {
     pointer-events: initial;
   }
 
+  .modal-form{}
+
+  .close-div{}
+
   .modal {
     position: relative;
-
-    width: 408px;
-    min-height: 584px;
-    padding: 24px;
     
+    padding: 24px;
     border-radius: 4px;
     background: var(--DAIRY, #FCFCFC);
   }
 
-
+  .close-button:hover,
+  .close-button:focus {
+    fill: var(--OCEAN, #404BBF);
+    color: #FFFFFF;
+  }
 
   .close-button {
     position: absolute;
-    top: 24px;
+    top: 0;
     left: 360px;
     padding: 8px;
     
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #111;
    
+     
     border-radius: 50%;
     background-color: #E7E9FC;
     
@@ -704,12 +707,24 @@ img {
   }
 
   .close-icon {
-    
     width: 8px;
     height: 8px;
-    stroke: #2E2F42;
+    stroke: currentColor;
   }
   
+  .form-title {
+    text-align: center;
+    width: 360px;
+    height: 24px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    
+    color: #2E2F42;
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+
   .form-label {
     display: block;
     margin-bottom: 8px;
@@ -718,28 +733,17 @@ img {
     line-height: 1.17;
     letter-spacing: -0.04em;
   }
-  
-  .form-title {
-    display: flex;
-    flex-wrap: wrap;
-    width: 360px;
-    height: 24px;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: -0.02em;
-    color: #2E2F42;
-    margin-top: 24px;
-    margin-bottom: 16px;
-  }
-  
-  .form:focus-within {
-    border-color: #4D5AE5;
-  }
-  
+
   .form-label:focus-within {
     color: #4D5AE5;
   }
+  
+ 
+  
+  .form-input:focus-within {
+    border-color: #4D5AE5;
+  }
+  
 
   .form-input {
     border-radius: 4px;
@@ -750,7 +754,8 @@ img {
     margin-bottom: 8px;
 
     display: flex;
-    width: 360px;
+    max-width
+    : 360px;
     height: 58px;
     align-items: flex-start;
   }
@@ -804,16 +809,31 @@ img {
   .checkbox-div {
     
     display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content:flex-start;
     margin-top: 16px;
     margin-bottom: 24px;
+   
+    
   }
   
   .input-checkbox {
     display: flex;
-    gap: 8px;
+    
+    
     align-items: center;
+
+   
+
     position: relative;
    
+  }
+
+  .input-checkbox:focus + .checkbox-icon {
+    stroke: #F4F4FD;
+    fill: #404BBF;
+    stroke-width: 1px;
   }
 
   .checkbox { 
@@ -828,11 +848,12 @@ img {
     position: absolute;
     stroke: #F4F4FD;
     fill: #404BBF;
-    stroke-width: 1px;
+    
     border-color: transparent;
   }
   
   .checkbox-text {
+    width: 338px;
     color: var(--LIGHT-SLATE, #8E8F99);
     font-size: 12px;
     font-weight: 400;

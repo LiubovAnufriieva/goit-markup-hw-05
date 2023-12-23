@@ -858,6 +858,7 @@ img {
     background-color: #4D5AE5;
     border: none; 
     border-radius: 4px;
+    margin-left: 95px;
     
     color: var(--WHITE, #FFF);
     cursor: pointer;
